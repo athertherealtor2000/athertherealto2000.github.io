@@ -220,3 +220,7 @@ with check (exists (
 
 -- No anon/authenticated policies are created for inventory_movements or
 -- breeding_batches. They remain private to trusted server/service-role operations.
+
+-- Prevent customers from changing their own role to admin.
+revoke update on public.profiles from authenticated;
+grant update (full_name, phone) on public.profiles to authenticated;
