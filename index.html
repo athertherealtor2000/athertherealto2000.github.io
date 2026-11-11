@@ -218,6 +218,22 @@ footer {
         padding: 55px 6%;
     }
 }
+
+/* Live catalogue */
+.catalogue-tools{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:25px 0 30px}
+.catalogue-tools button{border:1px solid #39e6c1;background:#102b34;color:#dffaf5;padding:10px 18px;border-radius:30px;cursor:pointer}
+.catalogue-tools button.active,.catalogue-tools button:hover{background:#12b997;color:#041b20}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+.product-card{background:#102b34;border:1px solid #1b4149;border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.product-card img{width:100%;height:220px;object-fit:cover;background:#0c252d}
+.product-info{padding:20px;display:flex;flex-direction:column;gap:9px;flex:1}
+.product-info h3{color:#39e6c1}
+.product-category,.stock-label{font-size:12px;color:#a8c2c7}
+.product-price{font-size:21px;font-weight:bold;color:#fff}
+.product-description{font-size:14px;color:#c1d4d7;flex:1}
+.stock-label.in-stock{color:#63e6a5}.stock-label.out-stock{color:#ff9b9b}
+.catalogue-message{text-align:center;color:#c1d4d7;padding:28px;background:#102b34;border-radius:12px}
+
 </style>
 </head>
 
@@ -229,6 +245,7 @@ footer {
     <nav>
         <a href="#home">Home</a>
         <a href="neocaridina.html">Neocaridina Shrimp</a>
+        <a href="#shop">Shop</a>
         <a href="#plants">Plants</a>
         <a href="#fish">Fish</a>
         <a href="#export">Wholesale</a>
@@ -291,6 +308,18 @@ footer {
 
     </div>
 
+</section>
+
+
+<section id="shop">
+  <h2 class="section-title">Shop Our Aquarium</h2>
+  <p class="section-subtitle">Browse our latest shrimp, ornamental fish and aquatic plants. Products are updated live from our catalogue.</p>
+  <div class="catalogue-tools" id="catalogue-filters">
+    <button class="active" data-category="all">All Products</button>
+  </div>
+  <div id="product-grid" class="product-grid">
+    <p class="catalogue-message">Loading our products…</p>
+  </div>
 </section>
 
 <section id="plants" class="about">
@@ -424,9 +453,87 @@ footer {
     SUPABASE_URL,
     SUPABASE_PUBLISHABLE_KEY
   );
-  // The database client is ready for future features such as products,
-  // customer accounts and orders. No database tables have been created yet.
   console.log("Aquarium World: Supabase client initialized.");
+
+  // Live public catalogue: reads only active products and categories.
+  const productGrid = document.getElementById("product-grid");
+  const filterBar = document.getElementById("catalogue-filters");
+  let catalogueProducts = [];
+  let activeCategory = "all";
+
+  function safeText(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+      "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+    })[char]);
+  }
+
+  function renderProducts() {
+    const visible = activeCategory === "all"
+      ? catalogueProducts
+      : catalogueProducts.filter(p => p.category_id === activeCategory);
+
+    if (!visible.length) {
+      productGrid.innerHTML = '<p class="catalogue-message">No products in this category yet. Please check back soon.</p>';
+      return;
+    }
+
+    productGrid.innerHTML = visible.map(product => {
+      const category = product.categories?.name || "Aquarium";
+      const image = product.image_url || "https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=900&q=80";
+      const available = Number(product.stock_quantity) > 0;
+      const price = Number(product.price || 0).toFixed(2);
+      return `
+        <article class="product-card">
+          <img src="${safeText(image)}" alt="${safeText(product.name)}" loading="lazy"
+               onerror="this.src='https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=900&q=80'">
+          <div class="product-info">
+            <span class="product-category">${safeText(category)}</span>
+            <h3>${safeText(product.name)}</h3>
+            <p class="product-description">${safeText(product.description || "Quality aquatic life and aquarium products.")}</p>
+            <div class="product-price">${safeText(product.currency || "AED")} ${price} <small style="font-size:12px;color:#a8c2c7">/ ${safeText(product.unit || "piece")}</small></div>
+            <span class="stock-label ${available ? "in-stock" : "out-stock"}">${available ? "In stock" : "Currently unavailable"}</span>
+          </div>
+        </article>`;
+    }).join("");
+  }
+
+  async function loadCatalogue() {
+    productGrid.innerHTML = '<p class="catalogue-message">Loading our products…</p>';
+    const [productsResult, categoriesResult] = await Promise.all([
+      aquariumSupabase.from("products")
+        .select("id,category_id,name,description,image_url,price,currency,stock_quantity,unit,categories(name)")
+        .eq("is_active", true).order("created_at", { ascending: false }),
+      aquariumSupabase.from("categories")
+        .select("id,name").eq("is_active", true).order("sort_order")
+    ]);
+
+    if (productsResult.error) {
+      console.error("Catalogue error:", productsResult.error);
+      productGrid.innerHTML = '<p class="catalogue-message">We could not load products right now. Please refresh the page shortly.</p>';
+      return;
+    }
+
+    catalogueProducts = productsResult.data || [];
+    (categoriesResult.data || []).forEach(category => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.dataset.category = category.id;
+      button.textContent = category.name;
+      filterBar.appendChild(button);
+    });
+
+    filterBar.addEventListener("click", event => {
+      const button = event.target.closest("button[data-category]");
+      if (!button) return;
+      activeCategory = button.dataset.category;
+      filterBar.querySelectorAll("button").forEach(item => item.classList.toggle("active", item === button));
+      renderProducts();
+    });
+
+    renderProducts();
+  }
+
+  loadCatalogue();
 </script>
 
 </body>
