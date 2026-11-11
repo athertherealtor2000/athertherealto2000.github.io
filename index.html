@@ -1,13 +1,418 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <title>Our Aquarium World</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Aquarium World | Shrimp, Fish & Aquatic Plants</title>
+
+<meta name="description" content="Explore freshwater ornamental shrimp, premium aquarium species, aquatic plants and wholesale opportunities at Our Aquarium World.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #071b22;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    background: #06151b;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #39e6c1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #39e6c1;
+}
+
+.hero {
+    min-height: 570px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    background:
+    linear-gradient(90deg, rgba(2,20,26,.95), rgba(2,20,26,.45)),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Live_planted_aquarium_with_neocaridina_shrimp.jpg")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #39e6c1;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #d1e3e5;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #12b997;
+    color: #041b20;
+    padding: 14px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.button:hover {
+    background: #55f0d1;
+}
+
+.button-outline {
+    background: transparent;
+    color: white;
+    border: 1px solid #39e6c1;
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #a8c2c7;
+    margin-bottom: 40px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #102b34;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1b4149;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card h3 {
+    color: #39e6c1;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #c1d4d7;
+    font-size: 14px;
+}
+
+.about {
+    background: #0c252d;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: #c1d4d7;
+}
+
+.export {
+    background: linear-gradient(120deg, #064b4b, #09252e);
+    text-align: center;
+}
+
+.export h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.export p {
+    max-width: 750px;
+    margin: auto auto 25px;
+    color: #d3e8e8;
+}
+
+.contact {
+    text-align: center;
+}
+
+footer {
+    background: #041217;
+    padding: 30px;
+    text-align: center;
+    color: #9bb5ba;
+    font-size: 13px;
+}
+
+@media(max-width:700px) {
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 65px 7%;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Welcome to Our Aquarium World!</h1>
-    <h2>Premium Neocaridina Shrimp & Aquatic Plants</h2>
-    <p>Welcome to our aquarium breeding business.</p>
-    <p>Coming soon: Shrimp, plants and aquarium supplies.</p>
+
+<header>
+    <div class="logo">🦐 OUR AQUARIUM WORLD</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#shrimp">Shrimp</a>
+        <a href="#plants">Plants</a>
+        <a href="#fish">Fish</a>
+        <a href="#export">Wholesale</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+    <div class="hero-content">
+
+        <h1>Discover the Beauty of the <span>Underwater World</span></h1>
+
+        <p>
+        Your destination for ornamental freshwater shrimp,
+        aquarium plants, tropical fish and aquatic life.
+        </p>
+
+        <a href="#shrimp" class="button">Explore Our World</a>
+
+        <a href="#contact" class="button button-outline">
+        Contact Us
+        </a>
+
+    </div>
+</div>
+
+<section id="shrimp">
+
+    <h2 class="section-title">Freshwater Shrimp</h2>
+
+    <p class="section-subtitle">
+    Discover colourful ornamental shrimp for your aquarium.
+    </p>
+
+    <div class="categories">
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Live_planted_aquarium_with_neocaridina_shrimp.jpg">
+            <div class="card-content">
+                <h3>Neocaridina Shrimp</h3>
+                <p>Bloody Mary, Cherry, Blue Dream, Yellow and other colourful varieties.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1676849176159-8b5d7a8c0b4b?auto=format&fit=crop&w=900&q=80" onerror="this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Live_planted_aquarium_with_neocaridina_shrimp.jpg'">
+            <div class="card-content">
+                <h3>Premium Caridina</h3>
+                <p>Explore premium freshwater shrimp varieties and specialist aquarium species.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80">
+            <div class="card-content">
+                <h3>Specialty Shrimp</h3>
+                <p>Discover interesting and unique ornamental shrimp for collectors.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="plants" class="about">
+
+    <h2 class="section-title">Aquatic Plants</h2>
+
+    <p class="section-subtitle">
+    Bring your aquarium to life with beautiful aquatic greenery.
+    </p>
+
+    <div class="categories">
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Java & Christmas Moss</h3>
+                <p>Natural greenery and shelter for freshwater shrimp.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Floating Plants</h3>
+                <p>Beautiful floating greenery for planted aquariums.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Stem Plants</h3>
+                <p>Attractive aquatic plants for aquascaping enthusiasts.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="fish">
+
+    <h2 class="section-title">Ornamental Fish</h2>
+
+    <p class="section-subtitle">
+    Explore the colourful world of freshwater ornamental fish.
+    </p>
+
+    <div class="categories">
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Guppies</h3>
+                <p>Beautiful varieties of ornamental guppies.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Mollies</h3>
+                <p>Popular freshwater aquarium fish.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Other Ornamental Fish</h3>
+                <p>Discover more freshwater aquarium species.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="export" id="export">
+
+    <h2>Wholesale & International Trade</h2>
+
+    <p>
+    We welcome enquiries from aquarium retailers, breeders,
+    wholesalers and international ornamental aquatic life buyers.
+    Contact us to discuss availability, bulk requirements
+    and potential business partnerships.
+    </p>
+
+    <a href="#contact" class="button">Wholesale Enquiries</a>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Let's Connect</h2>
+
+    <p class="section-subtitle">
+    Interested in shrimp, aquatic plants or wholesale opportunities?
+    Get in touch with us.
+    </p>
+
+    <a href="https://wa.me/?text=Hello%20Our%20Aquarium%20World"
+       class="button" target="_blank">
+       WhatsApp Enquiry
+    </a>
+
+    <p style="margin-top:20px;color:#9bb5ba;">
+    Our Aquarium World | Connecting Aquarium Enthusiasts Worldwide
+    </p>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Our Aquarium World. All Rights Reserved.</p>
+
+    <p>Freshwater Shrimp | Ornamental Fish | Aquatic Plants</p>
+
+    <p>
+    Aquarium photograph:
+    Snehayan / Wikimedia Commons,
+    <a style="color:#39e6c1"
+    href="https://creativecommons.org/licenses/by/4.0/"
+    target="_blank">CC BY 4.0</a>
+    </p>
+
+</footer>
+
 </body>
 </html>
