@@ -414,5 +414,20 @@ footer {
 
 </footer>
 
+
+<!-- Supabase connection -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const SUPABASE_URL = "https://htyhehvzuevkciauumto.supabase.co";
+  const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_pbqtwTDTXxfqWbEuKztBlQ_jBTeXBO-";
+  const aquariumSupabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+  // The database client is ready for future features such as products,
+  // customer accounts and orders. No database tables have been created yet.
+  console.log("Aquarium World: Supabase client initialized.");
+</script>
+
 </body>
 </html>
