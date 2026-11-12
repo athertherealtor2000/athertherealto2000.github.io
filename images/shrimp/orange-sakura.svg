@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+<title id="title">Orange Sakura freshwater dwarf shrimp illustration</title><desc id="desc">Detailed vector illustration of a Orange Sakura Neocaridina shrimp among aquatic plants.</desc>
+<defs><linearGradient id="water" x2="0" y2="1"><stop stop-color="#123e49"/><stop offset="1" stop-color="#061b25"/></linearGradient><linearGradient id="shell" x2=".8" y2="1"><stop stop-color="#ffb04a"/><stop offset=".48" stop-color="#e87918"/><stop offset="1" stop-color="#a84308"/></linearGradient><radialGradient id="shine"><stop stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="1000" height="620" rx="34" fill="url(#water)"/>
+<g opacity=".23" fill="none" stroke="#74cdb7" stroke-width="7"><path d="M70 620Q95 450 48 310M120 620Q170 430 140 275M900 620Q850 430 910 290M950 620Q900 470 960 360"/><path d="M48 390q-55-35-40-90m130 140q60-55 40-105m732 150q-60-55-35-120"/></g>
+<g fill="#2d9a75" opacity=".7"><path d="M80 620q-40-160 30-260 20 150-30 260m35 0q-5-170 90-240-25 150-90 240m690 0q-20-180 60-270 0 170-60 270m35 0q25-150 120-210-50 150-120 210"/></g>
+<g transform="translate(0 5)">
+<path d="M330 335Q245 270 195 230Q250 330 300 380Q225 365 165 320Q230 420 330 420" fill="#a84308" stroke="#d7f5f1" stroke-opacity=".25" stroke-width="5"/>
+<path d="M315 340Q260 235 225 170Q310 225 365 300" fill="#e87918" opacity=".9"/>
+<path d="M330 342Q385 235 455 205Q420 300 390 365" fill="#ffb04a" opacity=".95"/>
+<g stroke="#f6ffff" stroke-opacity=".35" stroke-width="4" fill="none"><path d="M365 365Q320 295 280 255M375 365Q400 280 435 235"/></g>
+<path d="M320 340Q380 245 505 250Q650 210 760 300Q810 350 750 410Q665 475 515 440Q400 430 320 380Z" fill="url(#shell)" stroke="#ffd9d2" stroke-opacity=".55" stroke-width="7"/>
+<path d="M390 275 Q370 350 395 435" fill="none" stroke="#a84308" stroke-width="12" opacity=".75"/><path d="M448 272 Q435 350 453 435" fill="none" stroke="#a84308" stroke-width="12" opacity=".75"/><path d="M506 269 Q500 350 511 435" fill="none" stroke="#a84308" stroke-width="12" opacity=".75"/><path d="M564 266 Q565 350 569 435" fill="none" stroke="#a84308" stroke-width="12" opacity=".75"/><path d="M622 263 Q630 350 627 435" fill="none" stroke="#a84308" stroke-width="12" opacity=".75"/><path d="M680 260 Q695 350 685 435" fill="none" stroke="#a84308" stroke-width="12" opacity=".75"/>
+<path d="M365 300Q470 230 600 265Q490 260 410 350" fill="url(#shine)" opacity=".55"/>
+<ellipse cx="745" cy="315" rx="12" ry="14" fill="#07131a"/><circle cx="749" cy="310" r="4" fill="#fff"/>
+<g stroke="#ffb04a" stroke-width="6" stroke-linecap="round" fill="none"><path d="M735 302Q810 180 925 160"/><path d="M745 308Q850 230 955 235"/><path d="M420 425l-25 75m75-65-10 78m65-65 5 80m55-82 20 75m45-85 35 65m-255-115-45 55m95-45-25 65m90-55-5 65m90-60 20 60"/></g>
+<path d="M745 345q65 70 20 105m-60-10q55 70 20 105m-90-100q40 70 0 110" fill="none" stroke="#ffb04a" stroke-width="9" stroke-linecap="round"/>
+</g>
+<g fill="#b9eee0" opacity=".65"><circle cx="180" cy="130" r="8"/><circle cx="220" cy="95" r="5"/><circle cx="820" cy="120" r="7"/><circle cx="870" cy="85" r="4"/><circle cx="680" cy="525" r="5"/></g>
+<text x="52" y="78" fill="#dff8f1" font-family="Arial,sans-serif" font-size="24" letter-spacing="5">OUR AQUARIUM WORLD</text><text x="52" y="555" fill="#ffffff" font-family="Arial,sans-serif" font-size="40" font-weight="700">ORANGE SAKURA</text><text x="55" y="585" fill="#a8d7d3" font-family="Arial,sans-serif" font-size="18" letter-spacing="3">NEOCARIDINA DAVIDI • VARIETY PROFILE</text>
+</svg>
