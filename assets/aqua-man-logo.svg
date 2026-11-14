@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+<defs><radialGradient id="bg"><stop stop-color="#073d55"/><stop offset="1" stop-color="#03121f"/></radialGradient><linearGradient id="aqua" x2="0" y2="1"><stop stop-color="#baf8ff"/><stop offset=".48" stop-color="#19c8f2"/><stop offset="1" stop-color="#0871ad"/></linearGradient><linearGradient id="glass" x2="0" y2="1"><stop stop-color="#d9ffff" stop-opacity=".65"/><stop offset="1" stop-color="#21c9c7" stop-opacity=".08"/></linearGradient></defs>
+<circle cx="400" cy="400" r="382" fill="#020b15" stroke="#04bff4" stroke-width="13"/><circle cx="400" cy="400" r="360" fill="url(#bg)" stroke="#7beaff" stroke-width="4"/>
+<path d="M75 215 Q400 35 725 215" fill="none" stroke="#0bd5ff" stroke-width="3" opacity=".65"/>
+<text x="400" y="145" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="82" font-weight="900" letter-spacing="3" fill="url(#aqua)" stroke="#e7fcff" stroke-width="2">AQUA MAN</text>
+<g fill="#9af4ff" opacity=".75"><circle cx="112" cy="290" r="8"/><circle cx="151" cy="245" r="5"/><circle cx="683" cy="275" r="9"/><circle cx="646" cy="225" r="5"/><circle cx="104" cy="520" r="6"/><circle cx="700" cy="490" r="6"/></g>
+<!-- diver body and helmet -->
+<path d="M120 600 Q132 455 210 360 Q263 294 365 305 L435 370 Q375 432 374 555 L360 642Z" fill="#09243c" stroke="#23cfff" stroke-width="10"/>
+<path d="M188 380 Q185 290 273 240 Q362 195 426 273 L414 350 Q360 390 271 370Z" fill="#102e49" stroke="#8cecff" stroke-width="12"/>
+<path d="M215 273 Q294 205 392 257 L414 298 Q320 280 224 324Z" fill="#071b30" stroke="#18c7f4" stroke-width="9"/>
+<path d="M246 287 Q300 257 365 278" fill="none" stroke="#d4fbff" stroke-width="14" stroke-linecap="round"/>
+<path d="M274 327 Q326 347 365 320" fill="none" stroke="#e8b18d" stroke-width="16" stroke-linecap="round"/>
+<path d="M305 342 Q342 356 377 340" fill="none" stroke="#f0c29c" stroke-width="23" stroke-linecap="round"/>
+<path d="M248 368 Q290 392 337 374 L367 416 Q302 456 211 418Z" fill="#0b4e78" stroke="#12bce9" stroke-width="8"/>
+<!-- arm -->
+<path d="M210 420 Q153 460 174 516 Q195 565 310 572 L470 556 L478 615 Q329 653 190 600 Q108 570 115 491 Q123 429 210 420Z" fill="#e9a77e" stroke="#9c614c" stroke-width="9"/>
+<!-- aquarium -->
+<path d="M405 340 L685 340 L685 578 L405 578Z" fill="url(#glass)" stroke="#c6fbff" stroke-width="12"/>
+<path d="M416 353 L674 353 L674 567 L416 567Z" fill="#073b39" opacity=".8"/>
+<path d="M416 515 Q480 480 530 520 T674 506 L674 567 L416 567Z" fill="#b7a27a"/>
+<g stroke="#43d27a" stroke-width="9" fill="none" stroke-linecap="round"><path d="M455 520 Q440 445 468 390 M468 475 Q500 430 490 390 M625 520 Q604 438 638 389 M594 510 Q570 452 580 420 M530 515 Q530 454 550 420"/></g>
+<g fill="#ffb43b"><path d="M460 420 q22 -18 44 0 q-22 20 -44 0"/><path d="M560 455 q22 -18 44 0 q-22 20 -44 0"/><path d="M612 405 q20 -16 40 0 q-20 18 -40 0"/></g><g fill="#f7f7ef"><path d="M505 475 q18 -15 36 0 q-18 16 -36 0"/><path d="M505 475 l-12 -12 v24Z"/></g>
+<path d="M415 340 L685 340" stroke="#f4ffff" stroke-width="13"/><path d="M430 332 L430 318 L662 318 L662 332" fill="none" stroke="#d8fbff" stroke-width="9"/>
+<path d="M365 615 Q415 590 475 600" fill="none" stroke="#f0b68f" stroke-width="22" stroke-linecap="round"/>
+<path d="M90 655 Q400 720 710 655" fill="none" stroke="#05c7f4" stroke-width="5"/>
+<path d="M110 678 Q400 738 690 678" fill="none" stroke="#1387ba" stroke-width="3"/>
+<text x="400" y="706" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="900" letter-spacing="1.5" fill="#f2fdff">ORNAMENTAL FISH &amp; AQUARIUM STORE</text>
+</svg>
