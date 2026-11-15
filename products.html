@@ -15,12 +15,14 @@ main{width:min(100%,1000px);margin:0 auto;text-align:center;padding:35px 0 60px}
 h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.1;margin:10px 0;color:#eafcff;letter-spacing:.05em}
 .intro{color:var(--muted);font-size:1.08rem;max-width:620px;margin:12px auto 30px}
 .nav a{display:inline-block;text-decoration:none;border:1px solid var(--aqua);border-radius:999px;padding:10px 22px;font-weight:700;color:#032033;background:var(--aqua);margin:6px}
-.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:35px 0}
+.categories{display:none;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:35px 0}
 .card{overflow:hidden;border:1px solid #1b6077;border-radius:18px;background:#061725cc;padding:0 0 24px;min-height:330px}
 .card img{display:block;width:100%;height:230px;object-fit:cover}
 .card h2{margin:18px 12px 8px;color:#eafcff;font-size:1.5rem}
 .card p{color:var(--muted);margin:0 20px}
 .credit{display:block;margin:12px 15px 0;color:#80aebe;font-size:.75rem;text-decoration:underline}
+.category-button{display:inline-block;border:1px solid var(--aqua);border-radius:999px;padding:10px 22px;font:700 1rem system-ui;cursor:pointer;color:#032033;background:var(--aqua);margin:6px}
+.categories.open{display:grid}
 footer{margin-top:40px;color:#7da7b7;font-size:.85rem}
 </style>
 </head>
@@ -29,8 +31,8 @@ footer{margin-top:40px;color:#7da7b7;font-size:.85rem}
 <div class="tagline">Explore our collection</div>
 <h1>AQUA MAN PRODUCTS</h1>
 <p class="intro">Discover the colourful world of ornamental shrimp. Choose a category below to explore our shrimp varieties. More products will be added soon.</p>
-<nav class="nav"><a href="index.html">Home</a></nav>
-<div class="categories">
+<nav class="nav"><a href="index.html">Home</a><button class="category-button" id="shrimpButton" type="button" aria-expanded="false" aria-controls="shrimpCategories">Shrimp</button></nav>
+<div class="categories" id="shrimpCategories">
 <section class="card" id="neocaridina">
 <img src="https://www.shrimpandaquatics.co.uk/photo-gallery/assets/img/thumb-1778436528-photo-DSC08346.webp" alt="Deep red Bloody Mary Neocaridina shrimp">
 <h2>Neocaridina Shrimp</h2>
@@ -46,5 +48,13 @@ footer{margin-top:40px;color:#7da7b7;font-size:.85rem}
 </div>
 <footer>Fish • Shrimp • Aquatic Plants • Aquarium Supplies</footer>
 </main>
+<script>
+const shrimpButton=document.getElementById("shrimpButton");
+const shrimpCategories=document.getElementById("shrimpCategories");
+shrimpButton.addEventListener("click",()=>{
+  const isOpen=shrimpCategories.classList.toggle("open");
+  shrimpButton.setAttribute("aria-expanded",String(isOpen));
+});
+</script>
 </body>
 </html>
